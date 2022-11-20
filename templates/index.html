@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Main</title>
+	<link rel="icon" type="image/x-icon" href="download.jpg">
+	<link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+	<header class="navbar">
+        <div class="navbar_brand">
+    	   <img src="static/logo.svg" alt="image" class="navbar_logo">MicroBlog
+        </div>
+        <ul class="navbar_navigation">
+            <li class="navbar_navigation_item">
+                <a href="#" class="navbar_link">Recent</a>
+            </li>
+            <li class="navbar_navigation_item">
+                <a href="#" class="navbar_link">Contact</a>
+            </li>
+        </ul>
+  </header>
+  <main class="main">
+    <section>
+        <h1>Add New Posts</h1>
+        <form class="form" action="/" method="POST">
+            <p class="form_input">
+                <label for="entry" class="form_label">Entry Contents</label>
+                <textarea name="content" id="entry" class="form_textarea"></textarea>                
+            </p>
+            <button class="form_submit">
+                Submit
+            </button>
+        </form>
+    </section>
+    <section>
+        <h1>Recent Posts</h1>
+        {% for entry in entries %}
+        <article class="entry">
+        <div>
+            <h2 class="entry_title">First Post</h2>
+            <time class="entry_date" datetime={{entry[1]}}>✅{{entry[2]}}</time>
+        </div>
+        <p class="entry_content">{{ entry[0] }}</p>
+        </article>
+        {% endfor %}
+    </section> 
+  </main>
+  <footer class="footer">
+    <div class="footer_content">
+        <section class="left">
+            <a href="" class="footer_item">Made by MKV</a>
+            <a href="" class="footer_item">My other projects</a>
+        </section>
+        <section class="right">
+            <div class="footer_column">
+                <a href="" class="footer_item">Recent</a>
+                <a href="" class="footer_item">Calender</a>
+            </div>
+        </section>
+        <section class="right">
+            <div class="footer_column">
+                <a href="" class="footer_item">About</a>
+                <a href="" class="footer_item">How this is made</a>
+            </div>
+        </section>
+    </div>
+  </footer>
+</body>
+</html>
