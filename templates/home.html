@@ -38,7 +38,7 @@
         <h1>Recent Posts</h1>
         {% for entry in entries %}
         <article class="entry">
-        <div>{% set count.value =count.value + 1 %}
+        <div>{% set count =count + 1 %}
             <h2 class="entry_title">Post No. {{ count }}</h2>
             <time class="entry_date" datetime={{entry[1]}}>✅{{entry[2]}}</time>
         </div>
