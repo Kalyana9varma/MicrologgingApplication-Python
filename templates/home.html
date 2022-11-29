@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
+	    {% set count=0 %}
 	<header class="navbar">
         <div class="navbar_brand">
     	   <img src="static/logo.svg" alt="image" class="navbar_logo">MicroBlog
@@ -35,7 +36,6 @@
     </section>
     <section>
         <h1>Recent Posts</h1>
-	    {% set count=0 %}
         {% for entry in entries %}
         <article class="entry">
         <div>{% set count=count+1 %}
